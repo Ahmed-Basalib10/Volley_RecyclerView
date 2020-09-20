@@ -34,6 +34,7 @@ Step 1 : Add the dependency in build.gradle(Module: app)
 }
 
 Step 2: Create / Set up the RequestQueue
+if you want to use this requestQueue only in on activity you can create it inside onCreate() method
 
      RequestQueue requestQueue;
 
@@ -47,6 +48,7 @@ Step 2: Create / Set up the RequestQueue
 for best practice create RequestQueue using Singleton class. This makes the RequestQueue for all the activities
 
 Step 3: Create standrad request there are many requests:
+you can create the type of request that you need
 
 3.1: String Request:
 
@@ -124,12 +126,7 @@ Step 3: Create standrad request there are many requests:
 						{ 
 							// Assign the response 
 							// to an ImageView 
-							ImageView 
-								imageView 
-								= (ImageView) 
-									findViewById( 
-										R.id.imageView); 
-          
+	    	ImageView 	imageView 	= (ImageView) 		findViewById( 			R.id.imageView); 
           imageView.setImageBitmap(response); 
 						} 
 					},
@@ -138,11 +135,18 @@ Step 3: Create standrad request there are many requests:
 step 4: Add the request to requestQueue
 
     requestQueue.add(request); 
+    // or use this if you used Singleton class
+    Mysingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonArrayRequest);
     
     
-    
+ In this project will try to fetch ISON data from server  and will display them in recyclerView
+ [This] (https://gist.githubusercontent.com/Ahmed-Basalib10/2a31961953d2887b5c6738f6fc72b232/raw/anime.json) is our JISON data
 #Note:
 for loading the image you can use Glide or Picasso 
+
+
+# output
+![](output.png)
 
 
 
