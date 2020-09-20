@@ -119,15 +119,15 @@ you can create the type of request that you need
     String URL = "http:// image_url.png"; 
 
     ImageRequest imageRequest = new ImageRequest(URL, 
-					new Response.Listener() { 
-						@Override
-						public void
-						onResponse(Bitmap response) 
-						{ 
-							// Assign the response 
-							// to an ImageView 
+			new Response.Listener() { 
+			@Override
+			public void
+			onResponse(Bitmap response) 
+			{ 
+				// Assign the response 
+				// to an ImageView 
 	    	ImageView 	imageView 	= (ImageView) 		findViewById( 			R.id.imageView); 
-          imageView.setImageBitmap(response); 
+                imageView.setImageBitmap(response); 
 						} 
 					},
 					max_width, max_height, null); 
@@ -139,8 +139,10 @@ step 4: Add the request to requestQueue
     Mysingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonArrayRequest);
     
     
- In this project will try to fetch ISON data from server  and will display them in recyclerView
- [This] (https://gist.githubusercontent.com/Ahmed-Basalib10/2a31961953d2887b5c6738f6fc72b232/raw/anime.json) is our JISON data
+ In this project will try to fetch JSON data from server  and will display them in recyclerView\
+ [This](https://gist.githubusercontent.com/Ahmed-Basalib10/2a31961953d2887b5c6738f6fc72b232/raw/anime.json) is our JSON data
+ 
+ 
 #Note:
 for loading the image you can use Glide or Picasso 
 
