@@ -1,5 +1,5 @@
 # Volley_RecyclerView
-JISON parsing using volley
+JSON parsing using volley
 
 ## What is Volley ?
 Volley is an HTTP network library that makes networking for android apps easier ,faster and without a lot of code.\
